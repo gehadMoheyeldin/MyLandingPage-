@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #f1ac0a;
+            color: #fff;
+            padding: 0.1rem;
+            text-align: center;
+        }
+
+        section {
+            padding: 2rem;
+        }
+
+        .hero {
+            display: block;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            text-align: center;
+            max-width: 300px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        #download {
+            max-width: 800px;
+            margin: 20px auto;
+            margin-top: 60px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        p {
+            color: #959292;
+            font-size: smaller;
+        }
+
+        #h2 {
+            display: block;
+            color: #f1ac0a;
+            margin: 5px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px 0;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #f13ddf;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: #f1ac0a;
+        }
+        #sCompileMe{
+            color: #f1ac0a;
+        }
+        #newline{
+            display: block;
+
+        }
+        .download-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            background-color: #f13ddf;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+
+        .download-button:hover {
+            background-color: #f1ac0a;
+        }
+
+.container {
+  position: relative;
+  width: 1160px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  margin: auto;
+}
+.container .box {
+  position: relative;
+  width: 275px;
+  height: 275px;
+  background: white;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-top: 45px;
+}
+.container:hover .box {
+  transform: rotateY(25deg);
+}
+.container .box:hover ~ .box {
+  transform: rotateY(-25deg);
+}
+.container .box:hover {
+  transform: rotateY(0deg) scale(1.25);
+  z-index: 1;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+}
+.container .box .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.container .box .imgBx:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,#f13ddf,#000);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+.container .box:hover .imgBx:before {
+  opacity: 1;
+}
+.container .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+.container .box .content h2 {
+  color: #fff;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  transform: translateY(200px);
+  transition-delay: 0.3s;
+}
+.container .box:hover .content h2 {
+  transform: translateY(0px);
+}
+.container .box .content p {
+  color: #fff;
+  transition: 0.5s;
+  font-size: 14px;
+  transform: translateY(200px);
+  transition-delay: 0.4s;
+}
+.container .box:hover .content p {
+  transform: translateY(0px);
+}
+#final{
+  color: #5f3794;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Simple Calculator</h1>
+        <p style="display: block;color: #e2dede; ">Calculate Basic Operations</p>
+        <a href="https://drive.google.com/drive/folders/1GmZ2Qp7ixLpgzRu32IBbGFLhenUwjHo2?usp=sharing" class="download-button" target="_blank">Download Now</a>
+    </header>
+
+    <section class="hero"><h2 id="h2">Let's Make an Operation </h2>
+      <p id="newline"></p></section>
+
+        <div class="container">
+            <div class="box">
+              <div class="imgBx">
+                <img src="./imgs/1.png">
+              </div>
+              <div class="content">
+                <div>
+                    <h2>Basic Arithmetic Operations</h2>
+                    <p>
+                      Include essential arithmetic operations such as addition, subtraction, multiplication, and division. Users should be able to perform basic calculations easily.</p>
+                
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="imgBx">
+                <img src="./imgs/3.png">
+              </div>
+              <div class="content">
+                <div>
+                    <h2>Responsive Design</h2>
+                    <p>
+                      Ensure that the calculator is responsive and works well on various devices, including desktops, tablets, and mobile phones. A well-designed layout will enhance the user experience across different screen sizes.</p>
+                
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="imgBx">
+                <img src="./imgs/5.png">
+              </div>
+              <div class="content">
+                <div>
+                    <h2>History and Memory Functionality</h2>
+                    <p>
+                      Implement a history or memory feature that allows users to view their recent calculations. This can be helpful for users who want to review or reuse previous results without re-entering the entire calculation.</p>        
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="imgBx">
+                <img src="./imgs/2.png" style="background-color: white;">
+              </div>
+              <div class="content">
+                <div>
+                    <h2>User-Friendly Interface</h2>
+                    <p>
+                      Keep the user interface simple and intuitive. Use clear and easily recognizable symbols for operations, and provide feedback to users, such as displaying error messages for invalid input. A user-friendly design encourages engagement and makes the calculator accessible to a wide audience.</p>        
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <section id="download">
+            <h2 id="final">Download Our Calculator</h2>
+            <p>
+                Get started with our Calculator today! Click the button below to download the latest version.
+            </p>
+            <a href="https://drive.google.com/drive/folders/1GmZ2Qp7ixLpgzRu32IBbGFLhenUwjHo2?usp=sharing" class="cta-button" target="_blank">Download Now</a>
+        </section>
+    
+        <footer>
+            <p>&copy; 2024 CompileMe. All rights reserved.</p>
+        </footer>
+    </body>
+    </html>
