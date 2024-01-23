@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CompileMe</title>
+    <title>Simple Calculator</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,7 +13,7 @@
         }
 
         header {
-            background-color: #333;
+            background-color: #f1ac0a;
             color: #fff;
             padding: 0.1rem;
             text-align: center;
@@ -69,7 +69,7 @@
 
         #h2 {
             display: block;
-            color: #555;
+            color: #f1ac0a;
             margin: 5px;
         }
 
@@ -80,17 +80,17 @@
             font-size: 16px;
             text-align: center;
             text-decoration: none;
-            background-color: #007BFF;
+            background-color: #f13ddf;
             color: #fff;
             border-radius: 5px;
             cursor: pointer;
         }
 
         .cta-button:hover {
-            background-color: #0056b3;
+            background-color: #f1ac0a;
         }
         #sCompileMe{
-            color: #0056b3;;
+            color: #f1ac0a;
         }
         #newline{
             display: block;
@@ -105,7 +105,7 @@
             font-size: 16px;
             text-align: center;
             text-decoration: none;
-            background-color: #007BFF;
+            background-color: #f13ddf;
             color: #fff;
             border-radius: 5px;
             cursor: pointer;
@@ -113,7 +113,7 @@
         }
 
         .download-button:hover {
-            background-color: #0056b3;
+            background-color: #f1ac0a;
         }
 
 .container {
@@ -162,7 +162,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg,#1463b8,#000);
+  background: linear-gradient(180deg,#f13ddf,#000);
   z-index: 1;
   opacity: 0;
   transition: 0.5s;
@@ -213,18 +213,20 @@
 .container .box:hover .content p {
   transform: translateY(0px);
 }
+#final{
+  color: #5f3794;
+}
     </style>
 </head>
 <body>
     <header>
-        <h1>CompileMe</h1>
-        <p style="display: block;color: #e2dede; ">Empowering Developers with Efficient Compilation</p>
+        <h1>Simple Calculator</h1>
+        <p style="display: block;color: #e2dede; ">Calculate Basic Operations</p>
         <a href="https://drive.google.com/drive/folders/1GmZ2Qp7ixLpgzRu32IBbGFLhenUwjHo2?usp=sharing" class="download-button" target="_blank">Download Now</a>
     </header>
 
-    <section class="hero"><h2 id="h2">Welcome to Our Compiler <span id="sCompileMe">CompileMe</span></h2>
-        <p id="newline">Transforming Code into Performance</p></section>
-
+    <section class="hero"><h2 id="h2">Let's Make an Operation </h2>
+      <p id="newline"></p></section>
 
         <div class="container">
             <div class="box">
@@ -233,9 +235,9 @@
               </div>
               <div class="content">
                 <div>
-                    <h2>User-Friendly Interface and Error Handling</h2>
+                    <h2>Basic Arithmetic Operations</h2>
                     <p>
-                        Mention how your compiler provides informative error messages to aid developers in identifying and fixing issues during the compilation process.</p>
+                      Include essential arithmetic operations such as addition, subtraction, multiplication, and division. Users should be able to perform basic calculations easily.</p>
                 
                 </div>
               </div>
@@ -246,11 +248,9 @@
               </div>
               <div class="content">
                 <div>
-                    <h2>Error Handling</h2>
+                    <h2>Responsive Design</h2>
                     <p>
-                        Syntax Errors: Detects and reports syntax errors in the source code.
-                        Semantic Errors: Identifies inconsistencies in the meaning of the code.
-                        Error Messages: Provides informative error messages to aid developers in debugging.</p>
+                      Ensure that the calculator is responsive and works well on various devices, including desktops, tablets, and mobile phones. A well-designed layout will enhance the user experience across different screen sizes.</p>
                 
                 </div>
               </div>
@@ -261,32 +261,30 @@
               </div>
               <div class="content">
                 <div>
-                    <h2>Code Generation</h2>
+                    <h2>History and Memory Functionality</h2>
                     <p>
-                        Intermediate Code Generation: Translates the parsed code into an intermediate representation for further processing.
-                        Target Code Generation: Converts the intermediate code into machine code or another target language.</p>        
+                      Implement a history or memory feature that allows users to view their recent calculations. This can be helpful for users who want to review or reuse previous results without re-entering the entire calculation.</p>        
                 </div>
               </div>
             </div>
             <div class="box">
               <div class="imgBx">
-                <img src="./imgs/2.png" style="border-radius: 50%;background-color: white;">
+                <img src="./imgs/2.png" style="background-color: white;">
               </div>
               <div class="content">
                 <div>
-                    <h2>Lexer and Parser</h2>
+                    <h2>User-Friendly Interface</h2>
                     <p>
-                        Lexer: Tokenizes the source code, breaking it down into meaningful elements.
-                        Parser: Analyzes the syntax structure of the source code based on the generated tokens.</p>        
+                      Keep the user interface simple and intuitive. Use clear and easily recognizable symbols for operations, and provide feedback to users, such as displaying error messages for invalid input. A user-friendly design encourages engagement and makes the calculator accessible to a wide audience.</p>        
                 </div>
               </div>
             </div>
           </div>
 
         <section id="download">
-            <h2>Download Our Compiler</h2>
+            <h2 id="final">Download Our Calculator</h2>
             <p>
-                Get started with our compiler today! Click the button below to download the latest version.
+                Get started with our Calculator today! Click the button below to download the latest version.
             </p>
             <a href="https://drive.google.com/drive/folders/1GmZ2Qp7ixLpgzRu32IBbGFLhenUwjHo2?usp=sharing" class="cta-button" target="_blank">Download Now</a>
         </section>
